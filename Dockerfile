@@ -32,7 +32,7 @@ RUN perl -npe 's/main/main\ contrib\ non-free/' -i /etc/apt/sources.list && \
 
 
 ### Volume
-VOLUME ["/var/lib/postgresql"]
+VOLUME ["/var/lib/postgresql/data"]
 
 ### Expose ports
 EXPOSE 5432
