@@ -9,6 +9,7 @@ ENV PG_MAJOR 9.4
 
 ### Install Applications DEBIAN_FRONTEND=noninteractive  --no-install-recommends
 RUN perl -npe 's/main/main\ contrib\ non-free/' -i /etc/apt/sources.list && \
+    apt-get update && \
     groupadd -g 2005 postgres && \
     useradd postgres -u 2005 -g postgres -r -m -d /var/lib/postgresql -s /bin/false && \
     apt-get install -y --no-install-recommends ca-certificates postgresql-common socat wget && \
