@@ -3,10 +3,10 @@ FROM debian:jessie
 MAINTAINER DI GREGORIO Nicolas "nicolas.digregorio@gmail.com"
 
 ### Environment variables
-ENV PATH /usr/lib/postgresql/$PG_MAJOR/bin:$PATH
-ENV PGDATA /var/lib/postgresql/data
 ENV PG_MAJOR 9.4
 ENV GOSU_VERSION 1.9
+ENV PATH /usr/lib/postgresql/$PG_MAJOR/bin:$PATH
+ENV PGDATA /var/lib/postgresql/data
 
 ### Install Applications DEBIAN_FRONTEND=noninteractive  --no-install-recommends
 RUN perl -npe 's/main/main\ contrib\ non-free/' -i /etc/apt/sources.list && \
