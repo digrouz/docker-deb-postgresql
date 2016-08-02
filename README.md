@@ -11,4 +11,9 @@ PostgreSQL, often simply Postgres, is an object-relational database management s
 http://postgresql.org/
 
 ## Usage
+    docker create --name postgres \
+      -v <path to data>:/var/lib/postgresql/data \
+      -v /etc/localtime:/etc/localtime:ro \
+      -p 5432:5432 \
+      -e POSTGRES_PASSWORD="<password>" digrouz/docker-deb-postgresql
 
