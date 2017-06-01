@@ -1,6 +1,5 @@
-# vim:set ft=dockerfile:
 FROM debian:jessie
-MAINTAINER DI GREGORIO Nicolas "nicolas.digregorio@gmail.com"
+LABEL maintainer "DI GREGORIO Nicolas <nicolas.digregorio@gmail.com>"
 
 ### Environment variables
 ENV PG_MAJOR 9.4
